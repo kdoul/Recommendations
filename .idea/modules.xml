@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/recommendations.iml" filepath="$PROJECT_DIR$/recommendations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/recommendations_main.iml" filepath="$PROJECT_DIR$/.idea/modules/recommendations_main.iml" group="recommendations" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/recommendations_test.iml" filepath="$PROJECT_DIR$/.idea/modules/recommendations_test.iml" group="recommendations" />
+    </modules>
+  </component>
+</project>
