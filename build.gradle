@@ -15,12 +15,11 @@ plugins {
 }
 
 // Define the main class for the application
-mainClassName = 'App'
+mainClassName = 'gr.unipi.msc.bigdata.recommender.App'
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile 'com.google.guava:guava:23.0'
-    compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
 }
@@ -30,4 +29,15 @@ repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "gr.unipi.msc.bigdata.recommender.App"
+    }
+
+    doFirst {
+        from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
 }
